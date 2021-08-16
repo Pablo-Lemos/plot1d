@@ -106,7 +106,6 @@ def plotter(points_file, xlabel = None, out_folder = None, plot_name = None,
     ax.set_ylim(-0.5, ny - 0.5)
 
     # the ticks:
-    # ax.set_xticklabels( ax.get_xmajorticklabels(), horizontalalignment='center', fontsize=0.9*main_fontsize);
     ax.set_yticklabels([])
     ax.set_yticks([])
 
@@ -149,4 +148,4 @@ def plotter(points_file, xlabel = None, out_folder = None, plot_name = None,
 
 
 if __name__ == '__main__':
-    plotter('./example.csv')
+    plotter('csv_files/example.csv')
