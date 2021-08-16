@@ -78,7 +78,7 @@ def plotter(points_file, xlabel = None, out_folder = None, plot_name = None, sav
     lines = 0
 
     for ii, point in enumerate(points):
-        i = ii - lines
+        i = ny - ii - 1 + lines
         if len(point) == 3:
             ax.errorbar(float(point[1]), i, xerr=float(point[2]), fmt='.', color=colors[i])
             plt.text(float(point[1]), i+0.1, point[0], fontsize=main_fontsize)
@@ -86,7 +86,7 @@ def plotter(points_file, xlabel = None, out_folder = None, plot_name = None, sav
             ax.errorbar(float(point[1]), i, xerr=([[float(point[2])], [float(point[3])]]), fmt='.', color=colors[i])
             plt.text(float(point[1]), i+0.1, point[0], fontsize=main_fontsize)
         elif len(point) == 1:
-            ax.axhline(i-0.5, color='k', ls='--')
+            ax.axhline(i+0.5, color='k', ls='--')
             lines += 1
         else:
             raise ValueError("Incorrect format of CSV file")
