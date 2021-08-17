@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import color_utilities as cu
+from plot1d import color_utilities
 import os
 import csv
 import matplotlib.gridspec as gridspec
@@ -84,7 +84,7 @@ def plotter(points_file, xlabel = None, out_folder = None, plot_name = None,
             xmax = higher
 
     # color palette:
-    colors = [cu.nice_colors(i) for i in range(ny)]
+    colors = [color_utilities.nice_colors(i) for i in range(ny)]
 
     # latex rendering:
     plt.rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
@@ -148,4 +148,4 @@ def plotter(points_file, xlabel = None, out_folder = None, plot_name = None,
 
 
 if __name__ == '__main__':
-    plotter('csv_files/example.csv')
+    plotter('../csv_files/example.csv')

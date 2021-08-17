@@ -1,5 +1,5 @@
 if __name__ == '__main__':
-    import plotter
+    from plot1d import plotter
 
     points_file = 'csv_files/h0_review.csv'
     plotter.plotter(points_file,
