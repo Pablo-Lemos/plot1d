@@ -4,7 +4,11 @@ This is a very simple plotting script, to read a CSV file, and produce a plot co
 
 Alternatively, the code can be pip installed with: 
 
-`>> pip install https://github.com/Pablo-Lemos/plot1d`
+``` 
+git clone https://github.com/Pablo-Lemos/plot1d
+cd plot1d
+python setup.py install
+```
 
 And then a plot can be generated from a CSV file using 
 
